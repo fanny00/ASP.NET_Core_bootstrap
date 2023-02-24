@@ -2,28 +2,34 @@
     ViewData["Title"] = "Home Page";
 }
 
-<table class="table table-striped table-hover table-sm">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Felipe</td>
-            <td>Gavilán</td>
-        </tr>
-        <tr class="table-success">
-            <td>2</td>
-            <td>Claudia</td>
-            <td>Rodríguez</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td colspan="2">Roberto González</td>
-        </tr>
-    </tbody>
-</table>
+<div>
+    Sin ratio
+</div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-_nQhGR0K8M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div>
+    Con ratio 16x9
+</div>
+
+<div class="ratio ratio-16x9 mb-5">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-_nQhGR0K8M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<hr />
+<div class="row gy-4">
+    <div class="col-md-4">
+        <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-_nQhGR0K8M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-_nQhGR0K8M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-_nQhGR0K8M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
