@@ -2,70 +2,32 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h4>Formulario normal</h4>
+<h4>Accordion</h4>
 
-<form>
-    <div class="mb-3">
-        <label class="form-label">Email</label>
-        <input type="email" class="form-control"/>
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Descripción</label>
-        <textarea type="email" class="form-control" rows="3"></textarea>
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Color Favorito</label>
-        <select class="form-select">
-            <option selected>Color Favorito</option>
-            <option value="1">Azul</option>
-            <option value="1">Rojo</option>
-            <option value="1">Verde</option>
-        </select>
-    </div>
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" checked/>
-        <label class="form-label">Es Empleado</label>
+<div class="accordion" id="ejemploAcordeon">
+
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button data-bs-toggle="collapse" data-bs-target="#elemento1acordeon" class="accordion-button">Elemento 1</button>
+        </h2>
+        <div id="elemento1acordeon" class="accordion-collapse collapse show" data-bs-parent="#ejemploAcordeon">
+            <div class="accordion-body">
+                Este es el contenido del primer elemento
+            </div>
+        </div>
     </div>
 
-    <div class="form-check">
-        <input type="radio" class="form-check-input" name="miradio"/>
-        <label>Opción 1</label>
-    </div>
-    <div class="form-check">
-        <input type="radio" class="form-check-input" name="miradio" />
-        <label>Opción 2</label>
-    </div>
-
-    <div class="form-floating mb-3 mt-5">
-        <input type="email" class="form-control" placeholder="email"/>
-        <label>Email</label>
-    </div>
-
-    <div class="mb-3">
-        <label class="form-label">Email</label>
-        <input type="email" class="form-control" disabled />
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button data-bs-toggle="collapse" data-bs-target="#elemento2acordeon" class="accordion-button">
+                Elemento 2
+            </button>
+        </h2>
+        <div id="elemento2acordeon" class="accordion-collapse collapse" data-bs-parent="#ejemploAcordeon">
+            <div class="accordion-body">
+                Este es el contenido del segundo elemento
+            </div>
+        </div>
     </div>
 
-    <div class="mb-3">
-        <label>Color de la camisa</label>
-        <input type="color" class="form-control form-control-color" value="#563d7c"/>
-    </div>
-    <div class="mb-5">
-        <button class="btn btn-primary">Enviar</button>
-        <button class="btn btn-secondary">Cancelar</button>
-    </div>
-</form>
-
-<h4>Formulario con columnas</h4>
-
-<div class="row">
-    <div class="col">
-        <input type="text" class="form-control" placeholder="Primer Nombre" />
-    </div>
-    <div class="col">
-        <input type="text" class="form-control" placeholder="Primer Apellido" />
-    </div>
-    <div class="col">
-        <button class="btn btn-primary">Enviar</button>
-    </div>
 </div>
