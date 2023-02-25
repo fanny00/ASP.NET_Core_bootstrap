@@ -2,30 +2,21 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h4>Tabs</h4>
+<h4>Menu Lateral con OffCanvas</h4>
+<hr />
 
-<ul class="nav nav-tabs justify-content-center">
-    <li class="nav-item">
-        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab1">
-            Tab 1
-        </button>
-    </li>
-    <li class="nav-item">
-        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab2">
-            Tab 2
-        </button>
-    </li>
-</ul>
+<button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#ejemploOffcanvas">
+    abrir offcanvas
+</button>
 
-
-<div class="tab-content">
-
-    <div class="tab-pane fade show active" id="tab1">
-        Buenos días desde tab 1
+<div class="offcanvas offcanvas-start" tabindex="-1" id="ejemploOffcanvas">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Mi aplicación</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
     </div>
-
-    <div class="tab-pane fade" id="tab2">
-        Adios desde tab 2
+    <div class="offcanvas-body">
+        <div>
+            Un texto de ejemplo
+        </div>
     </div>
-
 </div>
