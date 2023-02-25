@@ -2,32 +2,36 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h4>Accordion</h4>
+<h4>Alertas</h4>
 
-<div class="accordion" id="ejemploAcordeon">
+<button onclick="mostrarAlertaExitoso()">Mostrar alerta exitoso</button>
+<button onclick="mostrarAlertaError()">Mostrar alerta de error</button>
 
-    <div class="accordion-item">
-        <h2 class="accordion-header">
-            <button data-bs-toggle="collapse" data-bs-target="#elemento1acordeon" class="accordion-button">Elemento 1</button>
-        </h2>
-        <div id="elemento1acordeon" class="accordion-collapse collapse show" data-bs-parent="#ejemploAcordeon">
-            <div class="accordion-body">
-                Este es el contenido del primer elemento
-            </div>
-        </div>
-    </div>
+<div>
+    Las alertas se van a mostrar aquí
+</div>
 
-    <div class="accordion-item">
-        <h2 class="accordion-header">
-            <button data-bs-toggle="collapse" data-bs-target="#elemento2acordeon" class="accordion-button">
-                Elemento 2
-            </button>
-        </h2>
-        <div id="elemento2acordeon" class="accordion-collapse collapse" data-bs-parent="#ejemploAcordeon">
-            <div class="accordion-body">
-                Este es el contenido del segundo elemento
-            </div>
-        </div>
-    </div>
+<div id="contenedor-alertas">
 
 </div>
+
+@section Scripts{
+    <script>
+        function mostrarAlertaExitoso(){
+            mostrarAlerta('Este es un mensaje exitoso', 'success');
+        }
+
+        function mostrarAlertaError() {
+            mostrarAlerta('Este es un mensaje de error', 'danger');
+        }
+
+        function mostrarAlerta(mensaje, tipo){
+            const alerta = document.createElement("div");
+            alerta.innerHtml = `<div class="alert alert-${tipo}" role="alert">
+                                  ${mensaje}
+                               </div>`;
+            const contenedorAlertas = document.getElementById('contenedor-alertas');
+            contenedorAlertas.append(alerta);
+        }
+    </script>
+}
